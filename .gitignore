@@ -1,3 +1,4 @@
-node_modules/
+#node_modules/  # Comment out asap to avoid a massive git repo for now reason
 dist/
 .idea/
+*.iml
