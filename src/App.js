@@ -1,15 +1,18 @@
-import React, { Component} from "react";
+import React, {Component} from "react";
 import {hot} from "react-hot-loader";
 import "./styles/App.scss";
+import NavBar from "./components/NavBar/NavBar";
+import Timer from "./components/Timer";
 
-class App extends Component{
-    render(){
-        return(
-            <div className="App">
-                <h1> Hello, World 3 ! </h1>
+export const App = () => (
+            <div className="app-container">
+                <NavBar/>
+                <main className="app">
+                    <Timer/>
+                    <h1> Hello, World!</h1>
+                </main>
             </div>
         );
-    }
-}
+
 
 export default App;
