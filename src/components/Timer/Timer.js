@@ -1,5 +1,6 @@
 import React, {useEffect} from "react";
 import "./Timer.scss";
+import "../../styles/App.scss"
 
 const Timer = () => {
 
