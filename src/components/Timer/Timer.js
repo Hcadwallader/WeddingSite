@@ -1,34 +1,29 @@
 import React, {useEffect} from "react";
+import "./Timer.scss";
 
 const Timer = () => {
 
     const countdown = (endDate) => {
-        let days, hours, minutes, seconds;
+        let days, hours, minutes, seconds = 0;
 
         endDate = new Date(endDate).getTime();
-        console.log('endDate: ' + endDate);
         if (isNaN(endDate)) {
             return;
         }
 
         const calculate = () => {
             let startDate = new Date().getTime();
-            console.log('start date: ' + startDate);
 
             let timeRemaining = parseInt((endDate - startDate) / 1000);
-            console.log('time Remaining: ' + timeRemaining);
 
             if (timeRemaining >= 0) {
                 days = parseInt(timeRemaining / 86400);
-                console.log('days: ' + days);
                 timeRemaining = (timeRemaining % 86400);
 
                 hours = parseInt(timeRemaining / 3600);
-                console.log('hours: ' + hours);
                 timeRemaining = (timeRemaining % 3600);
 
                 minutes = parseInt(timeRemaining / 60);
-                console.log('minutes: ' + minutes);
                 timeRemaining = (timeRemaining % 60);
 
                 seconds = parseInt(timeRemaining);
@@ -50,13 +45,35 @@ const Timer = () => {
 
   return (
       <React.Fragment>
-          <div className="countdown">
-              <p className="timer">
-                  <span id="days"></span> Days
-                  <span id="hours"></span> Hours
-                  <span id="minutes"></span> Minutes
-                  <span id="seconds"></span> Seconds
-              </p>
+          <div className="Countdown">
+        <span className="Countdown-col">
+          <span className="Countdown-col-element">
+              <strong id="days"></strong>
+              <span>days</span>
+          </span>
+        </span>
+
+              <span className="Countdown-col">
+          <span className="Countdown-col-element">
+            <strong id="hours"></strong>
+            <span>hours</span>
+          </span>
+        </span>
+
+
+              <span className="Countdown-col">
+          <span className="Countdown-col-element">
+            <strong id="minutes"></strong>
+            <span>minutes</span>
+          </span>
+        </span>
+
+              <span className="Countdown-col">
+          <span className="Countdown-col-element">
+            <strong id="seconds"></strong>
+            <span>seconds</span>
+          </span>
+        </span>
           </div>
   </React.Fragment>
   );
