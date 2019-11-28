@@ -1,5 +1,4 @@
 .app {
-  margin: 100px 0 0 10px;
   text-align: center;
 }
 
@@ -8,9 +7,17 @@
 }
 
 body {
-  margin: auto 0;
-}
+    margin: auto 0;
+  }
 
 body, html {
+  height: 100%;
+}
+
+#root{
+  height: 100%;
+}
+
+.app, .app-container{
   height: 100%;
 }
