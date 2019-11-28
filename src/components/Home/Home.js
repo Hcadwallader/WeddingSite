@@ -1,4 +1,5 @@
 import Timer from "../Timer/Timer";
+import "../../styles/App.scss";
 import "./Home.scss";
 import React from "react";
 
