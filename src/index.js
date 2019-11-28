@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 import App from "./App.js";
 import Accommodation from "./components/Accommodation/Accommodation";
 import Venue from "./components/Venue/Venue";
 
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<Router><App /></Router>, document.getElementById("root"));
 
 /*
 const routing = (
