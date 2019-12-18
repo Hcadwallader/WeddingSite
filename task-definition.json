@@ -18,7 +18,7 @@
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
-          "awslogs-group": "/ecs/react-container-logs",
+          "awslogs-group": "react-docker-app",
           "awslogs-region": "eu-west-2"
         }
       }
