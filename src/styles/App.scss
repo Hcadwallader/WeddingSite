@@ -1,5 +1,7 @@
 .app {
   text-align: center;
+  position: relative;
+  color: white;
 }
 
 .app-container {
@@ -7,17 +9,35 @@
 }
 
 body {
-    margin: auto 0;
-  }
+  margin: auto 0;
+  overflow: hidden;
+}
 
 body, html {
   height: 100%;
 }
 
-#root{
+#root {
   height: 100%;
 }
 
-.app, .app-container{
+.app, .app-container {
   height: 100%;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("/images/barcelona.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: auto 0;
 }

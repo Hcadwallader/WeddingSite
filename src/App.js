@@ -9,15 +9,20 @@ import NavBar from "./components/NavBar/NavBar";
 
 export const App = () => (
     <div className="app-container">
-        <NavBar/>
-        <main className="app">
-        <Switch>
-            <Route exact path="/" component={Home}/>
-            <Route path="/Venue" component={Venue}/>
-            <Route path="/Accommodation" component={Accommodation}/>
-            <Redirect to="/"/>
-        </Switch>
-        </main>
+        <div className="bg">
+            <NavBar/>
+            <main className="app">
+
+                <Switch>
+                    <Route exact path="/" component={Home}/>
+                    <Route path="/Venue" component={Venue}/>
+                    <Route path="/Accommodation" component={Accommodation}/>
+                    <Route component={Home}/>
+                    <Redirect to="/"/>
+                </Switch>
+
+            </main>
+        </div>
     </div>
 
 );
