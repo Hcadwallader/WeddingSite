@@ -9,10 +9,10 @@ import NavBar from "./components/NavBar/NavBar";
 
 export const App = () => (
     <div className="app-container">
-        <div className="bg">
-            <NavBar/>
-            <main className="app">
 
+        <NavBar/>
+        <main className="app">
+            <div className="bg">
                 <Switch>
                     <Route exact path="/" component={Home}/>
                     <Route path="/Venue" component={Venue}/>
@@ -20,9 +20,9 @@ export const App = () => (
                     <Route component={Home}/>
                     <Redirect to="/"/>
                 </Switch>
+            </div>
+        </main>
 
-            </main>
-        </div>
     </div>
 
 );
