@@ -10,15 +10,24 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 exclude: /(node_modules|bower_components)/,
                 loader: "babel-loader",
-                options: { presets: ["@babel/env"] }
+                options: {presets: ["@babel/env"]}
             },
             {
-                test:/\.(scss|css)$/,
-                use :['style-loader','css-loader', 'sass-loader']
+                test: /\.(scss|css)$/,
+                use: ['style-loader', 'css-loader', 'sass-loader']
+            },
+            {
+                test: /\.(jpg|png)$/,
+                use: {
+                    loader: "file-loader",
+                    options: {
+                        name: "[path][name].[hash].[ext]",
+                    },
+                },
             }
         ]
     },
-    resolve: { extensions: ["*", ".js", ".jsx"] },
+    resolve: {extensions: ["*", ".js", ".jsx"]},
     output: {
         path: path.resolve(__dirname, "dist/"),
         publicPath: "/dist/",
@@ -28,7 +37,8 @@ module.exports = {
         contentBase: path.join(__dirname, "public/"),
         port: 3000,
         publicPath: "http://localhost:3000/dist/",
-        hotOnly: true
+        hotOnly: true,
+        historyApiFallback: true
     },
     plugins: [new webpack.HotModuleReplacementPlugin()]
 };
