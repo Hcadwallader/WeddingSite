@@ -1,5 +1,6 @@
 import React from "react";
 import "./Venue.scss";
+import "../../styles/App.scss";
 
 const Venue = () => (
     <div className="whiteBox">
