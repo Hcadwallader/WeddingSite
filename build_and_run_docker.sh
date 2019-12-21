@@ -1,4 +1,6 @@
 
+##Script to build the docker image, then run it locally
+
 TAG="local"
 
 # Build it
@@ -9,7 +11,5 @@ echo "docker image $TAG build"
 # Run it
 docker run -p 80:80 $TAG
 
-
-
-## ssh onto the container
+## command to ssh onto the container
 # docker exec -it <container name> /bin/bash
