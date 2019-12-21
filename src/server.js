@@ -16,9 +16,10 @@ var app = express();
 
 // app.set('appPath', 'public');
 // app.use(express.static(__dirname));
-app.use(express.static('public'));
-app.use(express.static('dist'));
-
+// app.use(express.static('public'));
+// app.use(express.static('dist'));
+app.use('/public', express.static('public'));
+app.use('/dist', express.static('dist'));
 // app.route('/dist/*')
 //     .get(function(req, res) {
 //         console.log("get /dist/* called");
@@ -26,7 +27,7 @@ app.use(express.static('dist'));
 app.route('/*')
     .get(function(req, res) {
         console.log("get /* called");
-        res.sendfile('public/index.html');
+        res.sendFile(__dirname + '/public/index.html');
     });
 
 app.listen(80, function() {

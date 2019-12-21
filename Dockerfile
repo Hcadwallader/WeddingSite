@@ -14,13 +14,11 @@ RUN npm run build
 # production environment
 FROM node
 WORKDIR /app
-
-# Pretty sure this step is way too heavy handed...
-COPY package*.json /app/
-RUN npm install
+RUN npm install express
 
 COPY --from=build   /app/dist/     /app/dist/
 COPY                /src/server.js /app/
-COPY                /public/*      /app/public/
+COPY                /public/       /app/public/
+
 EXPOSE 80
 CMD [ "node", "server.js"]
