@@ -18,6 +18,7 @@ app.route('/*')
         res.sendFile(__dirname + '/index.html');
     });
 
-app.listen(80, function() {
-    console.log("App is running at localhost: 80")
+// TODO: switch this too port 80
+app.listen(3000, function() {
+    console.log("App is running at localhost: 3000")
 });
