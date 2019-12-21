@@ -18,7 +18,7 @@ RUN npm install express
 
 COPY --from=build   /app/dist/     /app/dist/
 COPY                /src/server.js /app/
-COPY                /public/       /app/public/
+COPY                /public/       /app/
 
 EXPOSE 80
 CMD [ "node", "server.js"]
