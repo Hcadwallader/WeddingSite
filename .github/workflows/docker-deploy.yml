@@ -28,8 +28,6 @@ on:
   push:
     branches:
       - master
-      - docker-setup
-      - docker-deploy
 
 name: Deploy to Amazon ECS
 
