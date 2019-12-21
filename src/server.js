@@ -3,30 +3,18 @@
 // This script starts an express server and serves up the bundle.js within production
 //
 
-var path = require('path');
 var express = require('express');
 
 var app = express();
 
-// app.use(express.static(path.join(__dirname, '/dist')));
-//
-// app.get('/*', function(req, res){
-//     res.sendFile("index.html", {root: path.join(__dirname, '/dist')});
-// });
-
-// app.set('appPath', 'public');
-// app.use(express.static(__dirname));
-// app.use(express.static('public'));
-// app.use(express.static('dist'));
+// serve everything under the path directly from the directory on the box
+// app.use('/{PATH}', express.static('{DIR_ON_BOX}'));
 app.use('/images', express.static('images'));
 app.use('/dist', express.static('dist'));
-// app.route('/dist/*')
-//     .get(function(req, res) {
-//         console.log("get /dist/* called");
-//     });
+
+// for every other path, just give them index.html
 app.route('/*')
     .get(function(req, res) {
-        console.log("get /* called");
         res.sendFile(__dirname + '/index.html');
     });
 
