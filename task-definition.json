@@ -1,0 +1,28 @@
+
+{
+  "networkMode": "awsvpc",
+  "containerDefinitions": [
+    {
+      "essential": true,
+      "name": "react-app",
+      "image": "react",
+      "memory": 256,
+      "cpu": 256,
+      "portMappings": [
+        {
+          "hostPort": 3000,
+          "containerPort": 3000,
+          "protocol": "tcp"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "react-docker-app",
+          "awslogs-region": "eu-west-2"
+        }
+      }
+    }
+  ],
+  "family": "react-app"
+}
