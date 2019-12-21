@@ -1,5 +1,5 @@
 
-# build environment
+# build image - creates the bundle.js
 FROM node as build
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
@@ -11,14 +11,17 @@ RUN npm run build
 
 
 
-# production environment
+# production image - actually runs it
 FROM node
 WORKDIR /app
 RUN npm install express
 
+# Copy bundle.js from build image, copy static content from local
 COPY --from=build   /app/dist/     /app/dist/
 COPY                /src/server.js /app/
 COPY                /public/       /app/
 
-EXPOSE 80
+# Expose the port (#TODO: may not need anymore) and enter the command to actually run it
+## TODO: switch this too port 80 once AWS is updated
+EXPOSE 3000
 CMD [ "node", "server.js"]
