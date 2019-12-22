@@ -14,8 +14,9 @@ const Venue = () => (
             </div>
             <div className="column">
                 <iframe
+                    className="map"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2459.5589035842518!2d-3.355813484328854!3d51.941998786654665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486e32832d552eb9%3A0x13aa04cd095fc6ec!2sBarn%20at%20Brynich!5e0!3m2!1sen!2suk!4v1576704211903!5m2!1sen!2suk"
-                    width="600" height="450" frameBorder="0" style={{border:'5px'}} allowFullScreen="">
+                    allowFullScreen="">
                 </iframe>
             </div>
         </div>
