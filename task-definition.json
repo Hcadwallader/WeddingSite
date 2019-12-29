@@ -12,15 +12,7 @@
           "protocol": "tcp"
         }
       ],
-      "essential": true,
-      "logConfiguration": {
-        "logDriver": "awslogs",
-        "options": {
-          "awslogs-group": "frontend",
-          "awslogs-region": "eu-west-2",
-          "awslogs-stream-prefix": "frontend"
-        }
-      }
+      "essential": true
     }
   ],
   "requiresCompatibilities": [
