@@ -6,11 +6,6 @@
       "essential": true,
       "name": "frontend",
       "image": "wedding/frontend/react",
-      "memory": 512,
-      "cpu": 256,
-      "requiresCompatibilities": [
-        "FARGATE"
-      ],
       "portMappings": [
         {
           "hostPort": 3000,
@@ -28,5 +23,10 @@
       }
     }
   ],
-  "family": "WeddingSite_web"
+  "family": "WeddingSite_web",
+  "memory": 512,
+  "cpu": 256,
+  "requiresCompatibilities": [
+    "FARGATE"
+  ]
 }
