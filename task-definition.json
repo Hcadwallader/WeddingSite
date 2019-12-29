@@ -8,6 +8,9 @@
       "image": "wedding/frontend/react",
       "memory": 512,
       "cpu": 256,
+      "requiresCompatibilities": [
+        "FARGATE"
+      ],
       "portMappings": [
         {
           "hostPort": 3000,
