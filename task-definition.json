@@ -4,9 +4,9 @@
   "containerDefinitions": [
     {
       "essential": true,
-      "name": "react-app",
-      "image": "react",
-      "memory": 256,
+      "name": "frontend",
+      "image": "wedding/frontend/react",
+      "memory": 512,
       "cpu": 256,
       "portMappings": [
         {
@@ -18,11 +18,12 @@
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
-          "awslogs-group": "react-docker-app",
-          "awslogs-region": "eu-west-2"
+          "awslogs-group": "frontend",
+          "awslogs-region": "eu-west-2",
+          "awslogs-stream-prefix": "frontend"
         }
       }
     }
   ],
-  "family": "react-app"
+  "family": "WeddingSite_web"
 }
