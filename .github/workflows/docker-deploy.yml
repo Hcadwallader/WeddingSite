@@ -28,7 +28,6 @@ on:
   push:
     branches:
       - master
-      - moving-cd-to-new-cluster
 
 name: Deploy to Amazon ECS
 
