@@ -5,6 +5,7 @@
     {
       "name": "frontend",
       "image": "wedding/frontend/react",
+      "essential": true,
       "portMappings": [
         {
           "containerPort": 3000,
@@ -12,7 +13,14 @@
           "protocol": "tcp"
         }
       ],
-      "essential": true
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "frontend",
+          "awslogs-region": "eu-west-2",
+          "awslogs-stream-prefix": "frontend"
+        }
+      }
     }
   ],
   "requiresCompatibilities": [
