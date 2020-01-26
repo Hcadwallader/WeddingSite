@@ -1,28 +1,32 @@
-
 {
+  "family": "WeddingSite_web",
   "networkMode": "awsvpc",
   "containerDefinitions": [
     {
+      "name": "frontend",
+      "image": "wedding/frontend/react",
       "essential": true,
-      "name": "react-app",
-      "image": "react",
-      "memory": 256,
-      "cpu": 256,
       "portMappings": [
         {
-          "hostPort": 3000,
           "containerPort": 3000,
+          "hostPort": 3000,
           "protocol": "tcp"
         }
       ],
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
-          "awslogs-group": "react-docker-app",
-          "awslogs-region": "eu-west-2"
+          "awslogs-group": "frontend",
+          "awslogs-region": "eu-west-2",
+          "awslogs-stream-prefix": "frontend"
         }
       }
     }
   ],
-  "family": "react-app"
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "executionRoleArn": "arn:aws:iam::405312194192:role/ecs_task_execution_role",
+  "cpu": "256",
+  "memory": "512"
 }
