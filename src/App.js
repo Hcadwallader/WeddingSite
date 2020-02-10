@@ -6,6 +6,7 @@ import Accommodation from "./components/Accommodation/Accommodation";
 import {Switch, Route, Redirect} from 'react-router-dom'
 import Home from "./components/Home/Home";
 import NavBar from "./components/NavBar/NavBar";
+import ApiTest from "./components/ApiTest/ApiTest";
 
 export const App = () => (
     <div className="app-container">
@@ -17,6 +18,7 @@ export const App = () => (
                     <Route exact path="/" component={Home}/>
                     <Route path="/Venue" component={Venue}/>
                     <Route path="/Accommodation" component={Accommodation}/>
+                    <Route path="/Api" component={ApiTest}/>
                     <Route component={Home}/>
                     <Redirect to="/"/>
                 </Switch>
