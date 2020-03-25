@@ -1,9 +1,11 @@
-const path = require("path");
-const webpack = require("webpack");
+const path = require('path');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: "./src/index.js",
-    mode: "development",
+    entry: {
+        app: "./src/index.js"
+    },
     module: {
         rules: [
             {
@@ -31,14 +33,11 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, "dist/"),
         publicPath: "/dist/",
-        filename: "bundle.js"
+        filename: "[name].bundle.js",
     },
-    devServer: {
-        contentBase: path.join(__dirname, "public/"),
-        port: 3000,
-        publicPath: "http://localhost:3000/dist/",
-        hotOnly: true,
-        historyApiFallback: true
-    },
-    plugins: [new webpack.HotModuleReplacementPlugin()]
+    plugins: [
+        new CleanWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            title: 'Production',
+        })]
 };
