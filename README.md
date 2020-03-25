@@ -21,3 +21,6 @@ https://blog.adrienne.io/a-countdown-timer-in-pure-javascript/
                                                                                            
 sticky header articles:
 https://css-tricks.com/fixed-headers-on-page-links-and-overlapping-content-oh-my/
+
+https://webpack.js.org/guides/output-management/
+https://itnext.io/how-to-build-a-dynamic-controlled-form-with-react-hooks-2019-b39840f75c4f
