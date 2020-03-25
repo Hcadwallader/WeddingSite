@@ -1,15 +1,18 @@
 import React, {useState, useEffect} from "react";
 import "../../styles/App.scss";
 
+const guestDataService = process.env.NODE_ENV !== 'production'
+    ? require("../../services/DummyGuestDataService")
+    : require("../../services/GuestDataService");
+
 const Rsvp = () => {
 
-    const [guest, setGuest] = useState({
-        name: '',
-        relatives: ''
-    });
+    const [guest, setGuest] = useState([]);
 
     useEffect(() => {
-
+        const guests = guestDataService.GetGuestList();
+        console.log(guests);
+        setGuest(guests);
     },[]);
 
     const handleGuestChange = (e) => setGuest({
@@ -29,6 +32,9 @@ const Rsvp = () => {
                     value={guest.name}
                     onChange={handleGuestChange}
                 />
+                {guest && Object.values(guest).map((g, index) => {
+                    return <p key={index}>{g.name}</p>;
+                })}
                 {/* <input type="button" value="Add New Cat" />
         <input type="submit" value="Submit" />*/}
             </form>
