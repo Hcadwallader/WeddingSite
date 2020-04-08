@@ -24,3 +24,14 @@ https://css-tricks.com/fixed-headers-on-page-links-and-overlapping-content-oh-my
 
 https://webpack.js.org/guides/output-management/
 https://itnext.io/how-to-build-a-dynamic-controlled-form-with-react-hooks-2019-b39840f75c4f
+
+## Form field ideas
+
+https://studio.pixpa.com/login
+https://freefrontend.com/css-radio-buttons/
+https://freebiesupply.com/blog/css-radio-buttons/
+
+
+## Useful sites for fonts
+https://fonts.google.com/?sidebar.open&selection.family=Open+Sans
+https://www.fontspace.com/
