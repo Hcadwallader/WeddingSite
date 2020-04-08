@@ -16,7 +16,7 @@ export const App = () => (
         <main className="app">
             <div className="bg">
                 <Switch>
-                    <Route exact path="/" components={Home}/>ss
+                    <Route exact path="/" component={Home}/>
                     <Route path="/Venue" component={Venue}/>
                     <Route path="/Accommodation" component={Accommodation}/>
                     <Route path="/Api" component={ApiTest}/>
