@@ -43,11 +43,11 @@ const Rsvp = () => {
 	};
 
 	return (
-		<div className="whiteBox">
-			{!isAuthenticated && (
-				<React.Fragment>
-					<h1>Login</h1>
-					<form>
+		<div className="whiteBox rsvpContainer pageContainer">
+			<div className="textContainer formContainer">
+				{!isAuthenticated && (
+					<React.Fragment>
+						<h1>Login</h1>
 						<input
 							type="text"
 							name="name"
@@ -69,13 +69,11 @@ const Rsvp = () => {
 						<button type="button" onClick={handleGuestLogin}>
 							Submit
 						</button>
-					</form>
-				</React.Fragment>
-			)}
-			{isAuthenticated && !hasResponded && (
-				<React.Fragment>
-					<h1>RSVP form</h1>
-					<form>
+					</React.Fragment>
+				)}
+				{isAuthenticated && !hasResponded && (
+					<React.Fragment>
+						<h1>RSVP form</h1>
 						<input
 							type="text"
 							name="name"
@@ -84,14 +82,34 @@ const Rsvp = () => {
 							onChange={handleGuestChange}
 							placeholder="Name"
 						/>
-						<input
+						<div className="radioButtons">
+							<input
+								name="isAttending"
+								id="Yes"
+								onChange={handleGuestChange}
+								value={guestResponse.attending}
+								type="radio"
+								checked
+							/>
+							<label htmlFor="Yes">Yes</label>
+							<input
+								name="isAttending"
+								id="No"
+								onChange={handleGuestChange}
+								value={guestResponse.attending}
+								type="radio"
+							/>
+							<label htmlFor="No">No</label>
+						</div>
+
+						{/* <input
 							type="text"
 							name="isAttending"
 							id="isAttending"
 							value={guestResponse.attending}
 							onChange={handleGuestChange}
 							placeholder="Are you coming?"
-						/>
+						/> */}
 						<input
 							type="text"
 							name="starterChoice"
@@ -129,19 +147,19 @@ const Rsvp = () => {
                          })} */}
 						{/* <input type="button" value="Add New Cat" />
              <input type="submit" value="Submit" />*/}
-					</form>
-				</React.Fragment>
-			)}
-			{isAuthenticated && hasResponded && (
-				<h2>
-					Thanks for your RSVP.{' '}
-					{isAttending ? (
-						<span>Can't wait to see you at the wedding!</span>
-					) : (
-						<span>Sorry to hear you can't join us.</span>
-					)}
-				</h2>
-			)}
+					</React.Fragment>
+				)}
+				{isAuthenticated && hasResponded && (
+					<h2>
+						Thanks for your RSVP.{' '}
+						{isAttending ? (
+							<span>Can't wait to see you at the wedding!</span>
+						) : (
+							<span>Sorry to hear you can't join us.</span>
+						)}
+					</h2>
+				)}
+			</div>
 		</div>
 	);
 };
