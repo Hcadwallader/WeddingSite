@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import Login from './Login';
+import Form from './Form';
+import SummaryPage from './SummaryPage';
+
 import '../../styles/App.scss';
 import './Rsvp.scss';
 
@@ -39,148 +43,28 @@ const Rsvp = () => {
 	const handleGuestRsvpSubmission = (e) => {
 		console.log(e);
 		setHasResponded(true);
-		setIsAttending(false);
+		setIsAttending(true);
 	};
 
 	return (
 		<div className="whiteBox rsvpContainer">
 			<div className="formContainer">
 				{!isAuthenticated && (
-					<React.Fragment>
-						<div className="formItem">
-							<h1>Login</h1>
-						</div>
-						{/* <div className="formItem">test 1</div>
-						<div className="formItem">test 2</div>
-						<div className="formItem">test 3</div> */}
-						<div className="formItem">
-							<input
-								type="text"
-								name="name"
-								id="name"
-								value={guestResponse.name}
-								onChange={handleGuestChange}
-								onBlur={handleGuestChange}
-								placeholder="Please enter your name"
-							/>
-						</div>
-						<div className="formItem">
-							<input
-								type="text"
-								name="accessCode"
-								id="accessCode"
-								value={guestResponse.accessCode}
-								onChange={handleGuestChange}
-								onBlur={handleGuestChange}
-								placeholder="Please enter the code from your invite"
-							/>
-						</div>
-						<div className="formItem">
-							<button type="button" onClick={handleGuestLogin}>
-								Submit
-							</button>
-						</div>
-					</React.Fragment>
+					<Login
+						handleGuestChange={handleGuestChange}
+						handleGuestLogin={handleGuestLogin}
+						guestResponse={guestResponse}
+					></Login>
 				)}
 				{isAuthenticated && !hasResponded && (
-					<React.Fragment>
-						<div className="formItem">
-							<h1>RSVP form</h1>
-						</div>
-						<div className="formItem">
-							<input
-								type="text"
-								name="name"
-								id="name"
-								value={guestResponse.name}
-								onChange={handleGuestChange}
-								placeholder="Name"
-							/>
-						</div>
-						<div className="formItem">
-							<div className="radioButtons">
-								<input
-									name="isAttending"
-									id="Yes"
-									onChange={handleGuestChange}
-									value={guestResponse.attending}
-									type="radio"
-									checked
-								/>
-								<label htmlFor="Yes">Yes</label>
-								<input
-									name="isAttending"
-									id="No"
-									onChange={handleGuestChange}
-									value={guestResponse.attending}
-									type="radio"
-								/>
-								<label htmlFor="No">No</label>
-							</div>
-						</div>
-						<div className="formItem">
-							{/* <input
-							type="text"
-							name="isAttending"
-							id="isAttending"
-							value={guestResponse.attending}
-							onChange={handleGuestChange}
-							placeholder="Are you coming?"
-						/> */}
-							<input
-								type="text"
-								name="starterChoice"
-								id="starterChoice"
-								value={guestResponse.starterChoice}
-								onChange={handleGuestChange}
-								placeholder="What starter would you like?"
-							/>
-						</div>
-						<div className="formItem">
-							<input
-								type="text"
-								name="mainChoice"
-								id="mainChoice"
-								value={guestResponse.mainChoice}
-								onChange={handleGuestChange}
-								placeholder="What main course would you like?"
-							/>
-						</div>
-						<div className="formItem">
-							<input
-								type="text"
-								name="songchoice"
-								id="songchoice"
-								value={guestResponse.songchoice}
-								onChange={handleGuestChange}
-								placeholder="Enter a great song for our evening playlist (optional)"
-							/>
-						</div>
-						<div className="formItem">
-							<button
-								type="button"
-								onClick={handleGuestRsvpSubmission}
-							>
-								Submit
-							</button>
-						</div>
-						{/* {guestlist &&
-                         Object.values(guestlist).map((g, index) => {
-                             return <p key={index}>{g.name}</p>;
-                         })} */}
-						{/* <input type="button" value="Add New Cat" />
-             <input type="submit" value="Submit" />*/}
-					</React.Fragment>
+					<Form
+						handleGuestChange={handleGuestChange}
+						handleGuestRsvpSubmission={handleGuestRsvpSubmission}
+						guestResponse={guestResponse}
+					></Form>
 				)}
 				{isAuthenticated && hasResponded && (
-					<h2>
-						Thanks for your RSVP.{' '}
-						{isAttending ? (
-							<span>Can't wait to see you at the wedding!</span>
-						) : (
-							<span>Sorry to hear you can't join us.</span>
-						)}
-					</h2>
+					<SummaryPage isAttending={isAttending}></SummaryPage>
 				)}
 			</div>
 		</div>
