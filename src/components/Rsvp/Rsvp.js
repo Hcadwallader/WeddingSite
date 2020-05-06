@@ -16,7 +16,7 @@ const Rsvp = () => {
 	const [guestResponse, setGuestResponse] = useState([]);
 	const [isAuthenticated, setIsAuthenticated] = useState(false);
 	const [hasResponded, setHasResponded] = useState(false);
-	const [isAttending, setIsAttending] = useState();
+	const [isAttending, setIsAttending] = useState(null);
 
 	useEffect(() => {
 		const guests = guestDataService.GetGuestList();
@@ -32,6 +32,10 @@ const Rsvp = () => {
 	const handleGuestChange = (e) => {
 		const { name, value } = e.target;
 		setGuestResponse({ ...guestResponse, [name]: value });
+
+		if (name === 'attending') {
+			setIsAttending(value === 'true');
+		}
 		console.log(guestResponse);
 	};
 
@@ -43,31 +47,29 @@ const Rsvp = () => {
 	const handleGuestRsvpSubmission = (e) => {
 		console.log(e);
 		setHasResponded(true);
-		setIsAttending(true);
 	};
 
 	return (
-		<div className="whiteBox rsvpContainer">
-			<div className="formContainer">
-				{!isAuthenticated && (
-					<Login
-						handleGuestChange={handleGuestChange}
-						handleGuestLogin={handleGuestLogin}
-						guestResponse={guestResponse}
-					></Login>
-				)}
-				{isAuthenticated && !hasResponded && (
-					<Form
-						handleGuestChange={handleGuestChange}
-						handleGuestRsvpSubmission={handleGuestRsvpSubmission}
-						guestResponse={guestResponse}
-					></Form>
-				)}
-				{isAuthenticated && hasResponded && (
-					<SummaryPage isAttending={isAttending}></SummaryPage>
-				)}
-			</div>
-		</div>
+		<React.Fragment>
+			{!isAuthenticated && (
+				<Login
+					handleGuestChange={handleGuestChange}
+					handleGuestLogin={handleGuestLogin}
+					guestResponse={guestResponse}
+				></Login>
+			)}
+			{isAuthenticated && !hasResponded && (
+				<Form
+					handleGuestChange={handleGuestChange}
+					handleGuestRsvpSubmission={handleGuestRsvpSubmission}
+					guestResponse={guestResponse}
+					isAttending={isAttending}
+				></Form>
+			)}
+			{isAuthenticated && hasResponded && (
+				<SummaryPage isAttending={isAttending}></SummaryPage>
+			)}
+		</React.Fragment>
 	);
 };
 export default Rsvp;

@@ -1,12 +1,7 @@
 @import '../../styles/Constants.scss';
 
 input {
-	//width: 40%;
 	outline: 0;
-	//float: none;
-	//margin: 10px auto;
-	//min-width:
-
 	border: 1px solid #f2f2f2;
 	font-size: 14px;
 	padding: 15px;
@@ -14,29 +9,12 @@ input {
 	transition: all 0.25s ease-in-out;
 	font-family: sans-serif;
 	background: 0 0;
-	//display: flex;
-	//flex-grow: 1;
+	width: 350px;
 }
 
-// form {
-// 	display: flex;
-// }
-
-// input {
-// 	//width: 40%;
-// 	border: 1px solid #f2f2f2;
-// 	font-size: 14px;
-// 	padding: 15px;
-// 	-webkit-transition: all 0.25s ease-in-out;
-// 	transition: all 0.25s ease-in-out;
-// 	font-family: sans-serif;
-// 	background: 0 0;
-// 	display: flex;
-// 	flex-direction: column;
-// 	align-items: center;
-// 	height: 30%;
-// 	justify-content: space-around;
-// }
+input.radioButtons {
+	width: 50px;
+}
 
 button {
 	background: #8bc34a;
@@ -44,9 +22,7 @@ button {
 	color: #fff;
 	-webkit-transition: all 0.25s ease-in-out;
 	transition: all 0.25s ease-in-out;
-	//width: 20%;
 	padding: 13px 18px;
-	//display: inline-block;
 	border-radius: 5px;
 	outline: 0;
 	letter-spacing: 0.1em;
@@ -56,25 +32,32 @@ button {
 	font-size: 14px;
 }
 
-.radioButtons {
-	margin: 0 0 1.5rem;
-	box-sizing: border-box;
-	font-size: 0;
-	display: flex;
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	flex-flow: row nowrap;
-	-webkit-box-pack: start;
-	justify-content: flex-start;
-	-webkit-box-align: stretch;
-	align-items: stretch;
-}
+// .radioButtons {
+// 	box-sizing: border-box;
+// 	display: flex;
+// 	-webkit-box-orient: horizontal;
+// 	-webkit-box-direction: normal;
+// 	flex-flow: row nowrap;
+// 	-webkit-box-pack: start;
+// 	justify-content: flex-start;
+// 	-webkit-box-align: stretch;
+// 	align-items: stretch;
+// }
 
 .rsvpContainer {
 	width: 50%;
 	height: 60%;
 	@media (max-width: $small-mobile) {
 		width: 90%;
+	}
+}
+
+.loginContainer {
+	width: 50%;
+	height: 30%;
+	@media (max-width: $small-mobile) {
+		width: 90%;
+		height: 50%;
 	}
 }
 
@@ -88,4 +71,39 @@ button {
 
 .formItem {
 	display: flex;
+	font-size: 14px;
 }
+
+// $bg: #332f35;
+// $fg: lighten($bg, 20%);
+// $borderWidth: 3px;
+
+// input[type='radio'] {
+// 	position: absolute;
+// 	visibility: hidden;
+// 	display: none;
+// }
+
+// label {
+// 	color: lighten($bg, 40%);
+// 	display: inline-block;
+// 	cursor: pointer;
+// 	font-weight: bold;
+// 	padding: 5px 20px;
+// }
+
+// input[type='radio']:checked + label {
+// 	color: lighten($bg, 60%);
+// 	background: $fg;
+// }
+
+// label + input[type='radio'] + label {
+// 	border-left: solid $borderWidth $fg;
+// }
+// .radio-group {
+// 	border: solid $borderWidth $fg;
+// 	display: inline-block;
+// 	margin: 20px;
+// 	border-radius: 10px;
+// 	overflow: hidden;
+// }
