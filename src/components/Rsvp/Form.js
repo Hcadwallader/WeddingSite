@@ -6,6 +6,7 @@ const Form = ({
 	handleGuestChange,
 	handleGuestRsvpSubmission,
 	guestResponse,
+	guestList,
 	isAttending,
 }) => (
 	<div className="whiteBox rsvpContainer">
@@ -13,6 +14,10 @@ const Form = ({
 			<div className="formItem">
 				<h1>RSVP form</h1>
 			</div>
+			{/* {guestList &&
+				guestList.map((g, index) => {
+					return <p key={index}>{g}</p>;
+				})} */}
 			<div className="formItem">
 				<input
 					type="text"

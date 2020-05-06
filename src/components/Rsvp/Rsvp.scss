@@ -32,18 +32,6 @@ button {
 	font-size: 14px;
 }
 
-// .radioButtons {
-// 	box-sizing: border-box;
-// 	display: flex;
-// 	-webkit-box-orient: horizontal;
-// 	-webkit-box-direction: normal;
-// 	flex-flow: row nowrap;
-// 	-webkit-box-pack: start;
-// 	justify-content: flex-start;
-// 	-webkit-box-align: stretch;
-// 	align-items: stretch;
-// }
-
 .rsvpContainer {
 	width: 50%;
 	height: 60%;
@@ -73,37 +61,3 @@ button {
 	display: flex;
 	font-size: 14px;
 }
-
-// $bg: #332f35;
-// $fg: lighten($bg, 20%);
-// $borderWidth: 3px;
-
-// input[type='radio'] {
-// 	position: absolute;
-// 	visibility: hidden;
-// 	display: none;
-// }
-
-// label {
-// 	color: lighten($bg, 40%);
-// 	display: inline-block;
-// 	cursor: pointer;
-// 	font-weight: bold;
-// 	padding: 5px 20px;
-// }
-
-// input[type='radio']:checked + label {
-// 	color: lighten($bg, 60%);
-// 	background: $fg;
-// }
-
-// label + input[type='radio'] + label {
-// 	border-left: solid $borderWidth $fg;
-// }
-// .radio-group {
-// 	border: solid $borderWidth $fg;
-// 	display: inline-block;
-// 	margin: 20px;
-// 	border-radius: 10px;
-// 	overflow: hidden;
-// }

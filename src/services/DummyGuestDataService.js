@@ -1,6 +1,6 @@
-import {Guests} from "../testData/guests";
-
+import { Guests } from '../testData/guests';
 
 export const GetGuestList = () => {
-    return Guests;
-}
+	const familyGroup = Guests[1];
+	return familyGroup;
+};

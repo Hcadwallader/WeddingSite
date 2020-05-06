@@ -12,7 +12,7 @@ const guestDataService =
 		: require('../../services/GuestDataService');
 
 const Rsvp = () => {
-	const [guestlist, setGuest] = useState([]);
+	const [guestList, setGuestList] = useState([]);
 	const [guestResponse, setGuestResponse] = useState([]);
 	const [isAuthenticated, setIsAuthenticated] = useState(false);
 	const [hasResponded, setHasResponded] = useState(false);
@@ -21,7 +21,7 @@ const Rsvp = () => {
 	useEffect(() => {
 		const guests = guestDataService.GetGuestList();
 		console.log(guests);
-		setGuest(guests);
+		setGuestList(guests);
 	}, []);
 
 	/*const lookupGuestOnInviteList = (valueEntered) => {
@@ -42,6 +42,10 @@ const Rsvp = () => {
 	const handleGuestLogin = (e) => {
 		console.log(e);
 		setIsAuthenticated(true);
+		const guests = guestDataService.GetGuestList(guestResponse);
+		setGuestList(guests);
+		console.log(guestList);
+		//console.log(typeof guestList);
 	};
 
 	const handleGuestRsvpSubmission = (e) => {
@@ -63,6 +67,7 @@ const Rsvp = () => {
 					handleGuestChange={handleGuestChange}
 					handleGuestRsvpSubmission={handleGuestRsvpSubmission}
 					guestResponse={guestResponse}
+					guestList={guestList}
 					isAttending={isAttending}
 				></Form>
 			)}
