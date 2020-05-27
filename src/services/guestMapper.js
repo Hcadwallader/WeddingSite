@@ -16,5 +16,6 @@ const CreateNewGuest = (name) => {
 		main: null,
 		dietaryRequirements: null,
 		songchoice: null,
+		isOpen: false,
 	};
 };

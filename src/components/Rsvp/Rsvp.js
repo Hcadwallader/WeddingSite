@@ -39,6 +39,11 @@ const Rsvp = () => {
 		setHasResponded(true);
 	};
 
+	const handleToggleGuestForm = (e, isOpen, currentGuest) => {
+		currentGuest['isOpen'] = !isOpen;
+		setGuestResponse({ ...guestResponse, ...currentGuest });
+	};
+
 	return (
 		<React.Fragment>
 			{!isAuthenticated && (
@@ -48,22 +53,34 @@ const Rsvp = () => {
 					guestResponse={guestResponse}
 				></Login>
 			)}
-			{isAuthenticated &&
-				!hasResponded &&
-				guestList &&
-				Object.values(guestList).map((g, index) => {
-					return (
-						<Form
-							key={index}
-							currentGuest={g}
-							handleGuestChange={handleGuestChange}
-							handleGuestRsvpSubmission={
-								handleGuestRsvpSubmission
-							}
-							isAttending={isAttending}
-						></Form>
-					);
-				})}
+
+			{isAuthenticated && !hasResponded && guestList && (
+				<div className="whiteBox rsvpContainer">
+					<div className="formContainer">
+						<div className="formItem">
+							<h1>RSVP form</h1>
+						</div>
+
+						{Object.values(guestList).map((g, index) => {
+							return (
+								<Form
+									key={index}
+									currentGuest={g}
+									handleGuestChange={handleGuestChange}
+									handleGuestRsvpSubmission={
+										handleGuestRsvpSubmission
+									}
+									isAttending={isAttending}
+									handleToggleGuestForm={
+										handleToggleGuestForm
+									}
+								></Form>
+							);
+						})}
+					</div>
+				</div>
+			)}
+
 			{isAuthenticated && hasResponded && (
 				<SummaryPage isAttending={isAttending}></SummaryPage>
 			)}
