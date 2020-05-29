@@ -39,8 +39,10 @@ const Rsvp = () => {
 		setGuestList(guests);
 	};
 
-	const handleGuestRsvpSubmission = (e) => {
+	const handleGuestRsvpSubmission = (e, guestList) => {
 		setHasResponded(true);
+		const isAttending = Object.values(guestList).some((g) => g.attending);
+		setIsAttending(isAttending);
 	};
 
 	const handleToggleGuestForm = (e, isOpen, currentGuest) => {
@@ -81,6 +83,16 @@ const Rsvp = () => {
 								></Form>
 							);
 						})}
+						<div className="formItem">
+							<button
+								type="button"
+								onClick={(e) =>
+									handleGuestRsvpSubmission(e, guestList)
+								}
+							>
+								Submit
+							</button>
+						</div>
 					</div>
 				</div>
 			)}

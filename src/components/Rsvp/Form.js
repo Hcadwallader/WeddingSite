@@ -150,15 +150,6 @@ const Form = ({
 						</div>
 					</React.Fragment>
 				)}
-
-				<div className="formItem">
-					<button
-						type="button"
-						onClick={(e) => handleGuestRsvpSubmission(e)}
-					>
-						Submit
-					</button>
-				</div>
 			</React.Fragment>
 		)}
 	</React.Fragment>
