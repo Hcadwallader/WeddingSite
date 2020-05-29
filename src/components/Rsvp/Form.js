@@ -4,8 +4,6 @@ import './Rsvp.scss';
 
 const Form = ({
 	handleGuestChange,
-	handleGuestRsvpSubmission,
-	isAttending,
 	currentGuest,
 	handleToggleGuestForm,
 	rowIndex,
@@ -20,17 +18,6 @@ const Form = ({
 				{currentGuest.name}
 			</button>
 		</div>
-		{/* <div className="formItem">
-				<input
-					type="text"
-					name="name"
-					id="name"
-					value={currentGuest.name}
-					onChange={(e) => handleGuestChange(e, currentGuest)}
-					onBlur={(e) => handleGuestChange(e, currentGuest)}
-					placeholder="Name"
-				/>
-			</div> */}
 		{currentGuest && currentGuest.isOpen && (
 			<React.Fragment>
 				<div className="formItem">
