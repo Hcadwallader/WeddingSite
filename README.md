@@ -35,3 +35,15 @@ https://freebiesupply.com/blog/css-radio-buttons/
 ## Useful sites for fonts
 https://fonts.google.com/?sidebar.open&selection.family=Open+Sans
 https://www.fontspace.com/
+
+
+## Ideas to improve react 
+
+React.memo() - memoise props so only rerender component if change (for performance)
+React.lazy() - to lazy load components not needed on page load
+React.suspense() - to handle if lazy loaded component hasn't loaded in time i.e. maybe show a spinner or similar
+Some useful links: 
+    -https://reactjs.org/docs/react-api.html#reactmemo
+    -https://reactjs.org/docs/code-splitting.html
+    -https://webpack.js.org/guides/code-splitting/
+    -https://reactjs.org/blog/2018/11/27/react-16-roadmap.html
