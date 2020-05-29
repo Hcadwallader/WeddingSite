@@ -25,7 +25,11 @@ const Rsvp = () => {
 
 	const handleGuestChange = (e, currentGuest) => {
 		const { name, value } = e.target;
-		currentGuest[name] = value;
+
+		const newKey = name.includes('attending') ? name.slice(0, 9) : name;
+		const newValue = name.includes('attending') ? value === 'true' : value;
+
+		currentGuest[newKey] = newValue;
 		setGuestResponse({ ...guestResponse, ...currentGuest });
 	};
 
@@ -64,7 +68,7 @@ const Rsvp = () => {
 						{Object.values(guestList).map((g, index) => {
 							return (
 								<Form
-									key={index}
+									rowIndex={index}
 									currentGuest={g}
 									handleGuestChange={handleGuestChange}
 									handleGuestRsvpSubmission={
