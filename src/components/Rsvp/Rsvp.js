@@ -48,6 +48,9 @@ const Rsvp = () => {
 	const handleToggleGuestForm = (e, isOpen, currentGuest) => {
 		currentGuest['isOpen'] = !isOpen;
 		setGuestResponse({ ...guestResponse, ...currentGuest });
+		Object.values(guestList)
+			.filter((g) => g.name !== currentGuest.name)
+			.map((ng) => (ng.isOpen = false));
 	};
 
 	return (
