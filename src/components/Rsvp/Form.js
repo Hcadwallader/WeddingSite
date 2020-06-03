@@ -11,6 +11,7 @@ const Form = ({
 	<React.Fragment>
 		<div className="formItem">
 			<button
+				className="nameBanner"
 				onClick={(e) =>
 					handleToggleGuestForm(e, currentGuest.isOpen, currentGuest)
 				}

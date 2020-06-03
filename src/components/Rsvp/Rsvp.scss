@@ -13,7 +13,7 @@ input {
 }
 
 input.radioButtons {
-	width: 50px;
+	width: 40px;
 }
 
 button {
@@ -28,8 +28,13 @@ button {
 	letter-spacing: 0.1em;
 	font-weight: 500;
 	cursor: pointer;
-	font-family: sans-serif;
 	font-size: 14px;
+}
+button.nameBanner {
+	background: #7da1bf;
+	border: 1px solid #7da1bf;
+	width: 350px;
+	border-radius: unset;
 }
 
 select {
@@ -49,7 +54,7 @@ select {
 	background-repeat: no-repeat, repeat;
 	background-position: right 0.7em top 50%, 0 0;
 	background-size: 0.65em auto, 100%;
-	width: 380px;
+	width: 350px;
 }
 
 .rsvpContainer {
