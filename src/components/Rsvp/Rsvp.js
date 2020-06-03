@@ -34,6 +34,7 @@ const Rsvp = () => {
 	};
 
 	const handleGuestLogin = (e) => {
+		guestDataService.LoginGuest(guestResponse);
 		setIsAuthenticated(true);
 		const guests = guestDataService.GetGuestList(guestResponse);
 		setGuestList(guests);
@@ -73,6 +74,7 @@ const Rsvp = () => {
 						{Object.values(guestList).map((g, index) => {
 							return (
 								<Form
+									key={index}
 									rowIndex={index}
 									currentGuest={g}
 									handleGuestChange={handleGuestChange}
