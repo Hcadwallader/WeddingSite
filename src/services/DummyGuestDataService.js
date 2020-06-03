@@ -16,5 +16,21 @@ export const LoginGuest = (guestResponse) => {
 		}),
 	})
 		.then((response) => response.json())
-		.then((data) => window.localStorage.setItem('token', data.token));
+		.then((data) => {
+			window.localStorage.setItem('token', data.token);
+
+			// let authorisationValue = 'Bearer ' + data.token;
+			// console.log(authorisationValue);
+			// fetch('https://schwanwedding.com/api/group', {
+			// 	headers: {
+			// 		Authorization: `Bearer ${data.token}`,
+			// 	},
+			// 	credentials: 'include',
+			// 	method: 'GET',
+			// })
+			// 	.then((response) => response.json())
+			// 	.then((data) => {
+			// 		console.log(data);
+			// 	});
+		});
 };
