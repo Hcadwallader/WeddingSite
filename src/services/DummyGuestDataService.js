@@ -18,19 +18,23 @@ export const LoginGuest = (guestResponse) => {
 		.then((response) => response.json())
 		.then((data) => {
 			window.localStorage.setItem('token', data.token);
+			fetch('https://schwanwedding.com/api/group', {
+				headers: {
+					Authorization: `Bearer ${data.token}`,
+				},
+				credentials: 'include',
+				method: 'GET',
+			})
+				.then((response) => response.json())
+				.then((data) => {
+					// console.log(data);
+					// console.log(data.guests);
+					// console.log(data.guests[0]);
+					// console.log(Object.values(data.guests));
 
-			// let authorisationValue = 'Bearer ' + data.token;
-			// console.log(authorisationValue);
-			// fetch('https://schwanwedding.com/api/group', {
-			// 	headers: {
-			// 		Authorization: `Bearer ${data.token}`,
-			// 	},
-			// 	credentials: 'include',
-			// 	method: 'GET',
-			// })
-			// 	.then((response) => response.json())
-			// 	.then((data) => {
-			// 		console.log(data);
-			// 	});
+					// console.log(data.guests.map((g) => g.firstName));
+
+					MapToGuests(data.guests);
+				});
 		});
 };
