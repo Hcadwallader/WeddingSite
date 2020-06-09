@@ -7,7 +7,8 @@ export const GetGuestList = (guestResponse) => {
 };
 
 export const LoginGuest = (guestResponse) => {
-	fetch('https://schwanwedding.com/api/login', {
+
+	const getAuthToken = await fetch('https://schwanwedding.com/api/login', {
 		headers: { 'Content-Type': 'application/json; charset=utf-8' },
 		method: 'POST',
 		body: JSON.stringify({
@@ -18,19 +19,7 @@ export const LoginGuest = (guestResponse) => {
 		.then((response) => response.json())
 		.then((data) => {
 			window.localStorage.setItem('token', data.token);
+		});
 
-		// 	let authorisationValue = 'Bearer ' + data.token;
-		// 	console.log(authorisationValue);
-		// 	fetch('https://schwanwedding.com/api/group', {
-		// 		headers: {
-		// 			Authorization: `Bearer ${data.token}`,
-		// 		},
-		// 		credentials: 'include',
-		// 		method: 'GET',
-		// 	})
-		// 		.then((response) => response.json())
-		// 		.then((data) => {
-		// 			console.log(data);
-		// 		});
-		// });
+		const getRelatedGuests = await
 };
