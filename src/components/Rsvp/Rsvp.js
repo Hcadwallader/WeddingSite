@@ -34,10 +34,10 @@ const Rsvp = () => {
 	};
 
 	const handleGuestLogin = (e) => {
-		guestDataService.LoginGuest(guestResponse);
-		setIsAuthenticated(true);
-		const guests = guestDataService.GetGuestList(guestResponse);
-		setGuestList(guests);
+		guestDataService
+			.getGuestList(guestResponse)
+			.then((guest) => setGuestList(guest))
+			.then(() => setIsAuthenticated(true));
 	};
 
 	const handleGuestRsvpSubmission = (e, guestList) => {

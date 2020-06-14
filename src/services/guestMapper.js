@@ -1,8 +1,8 @@
 export const MapToGuests = (guestsReturnedFromLookup) => {
 	let guestResponse = {};
 
-	for (const g of guestsReturnedFromLookup) {
-		guestResponse[guest.name] = CreateNewGuest(g);
+	for (const g of guestsReturnedFromLookup.guests) {
+		guestResponse[g.name] = CreateNewGuest(g);
 	}
 	return guestResponse;
 };
