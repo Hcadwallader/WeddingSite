@@ -48,3 +48,7 @@ https://blog.logrocket.com/the-complete-guide-to-using-localstorage-in-javascrip
 https://stackoverflow.com/questions/45395174/fetch-respond-to-preflight-response
 https://stackoverflow.com/questions/18264334/cross-origin-resource-sharing-with-spring-security
 https://www.baeldung.com/spring-security-cors-preflight
+
+
+## Async/await guide
+https://javascript.info/async-await
