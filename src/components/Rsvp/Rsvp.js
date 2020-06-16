@@ -41,8 +41,6 @@ const Rsvp = () => {
 	};
 
 	const handleGuestRsvpSubmission = (e, guestList) => {
-		console.log(" e = " + e);
-		console.log(" guestList = " + guestList);
 		guestDataService.submitResponses(guestList);
 		setHasResponded(true);
 		const isAttending = Object.values(guestList).some((g) => g.attending);
