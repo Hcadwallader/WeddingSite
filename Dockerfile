@@ -21,9 +21,6 @@ COPY --from=build   /app/dist/     /app/dist/
 COPY                /src/server.js /app/
 COPY                /public/       /app/
 
-RUN ls -ltra /app/
-RUN ls -ltra /app/dist
-RUN ls -ltra /app/public
 
 # Expose the port (#TODO: may not need anymore) and enter the command to actually run it
 ## TODO: switch this too port 80 once AWS is updated
