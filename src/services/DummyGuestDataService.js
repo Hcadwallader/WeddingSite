@@ -1,12 +1,5 @@
-import { Guests } from '../testData/guests';
 import { MapToGuests } from './guestMapper';
 
-// export const GetGuestList = () => {
-// 	const familyGroup = Guests[1];
-// 	return MapToGuests(familyGroup);
-// };
-
-//const url = 'http://localhost:8080/api/';
 const url = 'https://schwanwedding.com/api/';
 
 export const getGuestList = async (guestResponse) => {
@@ -19,7 +12,6 @@ export const getGuestList = async (guestResponse) => {
 		}),
 	});
 	let data = await authTokenResponse.json();
-	console.log(data.token);
 	window.localStorage.setItem('token', data.token);
 	let guestListResponse = await fetch(url + 'group', {
 		headers: {
@@ -31,7 +23,6 @@ export const getGuestList = async (guestResponse) => {
 	let guests = await guestListResponse.json();
 
 	let mappedGuest = MapToGuests(guests);
-	console.log(mappedGuest);
 	return mappedGuest;
 };
 
