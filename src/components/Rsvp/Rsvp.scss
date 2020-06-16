@@ -59,18 +59,18 @@ select {
 
 .rsvpContainer {
 	width: 50%;
-	height: 60%;
+	height: 80%;
 	@media (max-width: $small-mobile) {
-		width: 90%;
+		width: 100%;
 	}
 }
 
 .loginContainer {
 	width: 50%;
 	height: 40%;
-	@media (max-width: $small-mobile) {
-		width: 90%;
-		height: 50%;
+	@media (max-width: $large-mobile) {
+		width: 100%;
+		height: 60%;
 	}
 }
 
