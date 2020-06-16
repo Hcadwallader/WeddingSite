@@ -125,8 +125,8 @@ const Form = ({
 						<div className="formItem">
 							<input
 								type="text"
-								name="songchoice"
-								id="songchoice"
+								name="songChoice"
+								id="songChoice"
 								onChange={(e) =>
 									handleGuestChange(e, currentGuest)
 								}
