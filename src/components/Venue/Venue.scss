@@ -1,4 +1,4 @@
-@import '../../styles/Constants';
+@import '../../styles/Constants.scss';
 
 .column {
 	float: left;
@@ -8,9 +8,9 @@
 	justify-content: space-evenly;
 	align-items: center;
 
-	@media (max-width: $small-mobile) {
+	@media (max-width: $large-mobile) {
 		width: unset;
-		flex-direction: row;
+		//flex-direction: row;
 	}
 }
 
@@ -35,8 +35,9 @@
 	frameborder: 0;
 	border: 5px;
 
-	@media (min-width: $small-mobile) {
-		width: 100%;
+	@media (max-width: $large-mobile) {
+		width: unset;
+		height: unset;
 		//max-width: 100%;
 	}
 }
