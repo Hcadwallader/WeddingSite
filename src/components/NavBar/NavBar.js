@@ -1,20 +1,28 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './NavBar.scss';
 
 const NavBar = () => (
 	<ul>
 		<li>
-			<Link to="/">Home</Link>
+			<NavLink activeClassName="highlight" exact={true} to="/">
+				Home
+			</NavLink>
 		</li>
 		<li>
-			<Link to="/Venue">Venue</Link>
+			<NavLink activeClassName="highlight" to="/Venue">
+				Venue
+			</NavLink>
 		</li>
 		<li>
-			<Link to="/Accommodation">Accommodation</Link>
+			<NavLink activeClassName="highlight" to="/Accommodation">
+				Accommodation
+			</NavLink>
 		</li>
 		<li>
-			<Link to="/Rsvp">Rsvp</Link>
+			<NavLink activeClassName="highlight" to="/Rsvp">
+				Rsvp
+			</NavLink>
 		</li>
 	</ul>
 );
