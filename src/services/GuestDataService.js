@@ -11,6 +11,10 @@ export const getGuestList = async (guestResponse) => {
 			code: guestResponse.accessCode,
 		}),
 	});
+	let suceessfulLogin = await authTokenResponse.status;
+	if (suceessfulLogin && !authTokenResponse.ok) {
+		return null;
+	}
 	let data = await authTokenResponse.json();
 	window.localStorage.setItem('token', data.token);
 	let guestListResponse = await fetch(url + 'group', {
@@ -20,6 +24,7 @@ export const getGuestList = async (guestResponse) => {
 		credentials: 'include',
 		method: 'GET',
 	});
+
 	let guests = await guestListResponse.json();
 
 	let mappedGuest = MapToGuests(guests);

@@ -17,6 +17,7 @@ const Rsvp = () => {
 	const [isAuthenticated, setIsAuthenticated] = useState(false);
 	const [hasResponded, setHasResponded] = useState(false);
 	const [isAttending, setIsAttending] = useState(null);
+	const [loginError, setLoginError] = useState(null);
 
 	const handleLoginFormChange = (e) => {
 		const { name, value } = e.target;
@@ -34,10 +35,21 @@ const Rsvp = () => {
 	};
 
 	const handleGuestLogin = (e) => {
-		guestDataService
-			.getGuestList(guestResponse)
-			.then((guest) => setGuestList(guest))
-			.then(() => setIsAuthenticated(true));
+		guestDataService.getGuestList(guestResponse).then((guest) => {
+			if (guest) {
+				setGuestList(guest);
+				setIsAuthenticated(true);
+			} else {
+				setLoginError(
+					'Unable to login, please double check the information on your invite and try again'
+				);
+			}
+		});
+		// .then((guest) => {
+		// 	if (guest != null) {
+		// 		setIsAuthenticated(true);
+		// 	}
+		// });
 	};
 
 	const handleGuestRsvpSubmission = (e, guestList) => {
@@ -62,6 +74,7 @@ const Rsvp = () => {
 					handleGuestChange={handleLoginFormChange}
 					handleGuestLogin={handleGuestLogin}
 					guestResponse={guestResponse}
+					loginError={loginError}
 				></Login>
 			)}
 
