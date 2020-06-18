@@ -56,30 +56,30 @@ const Timer = () => {
 
 	return (
 		<React.Fragment>
-			<div className="Countdown">
-				<span className="Countdown-col">
-					<span className="Countdown-col-element">
+			<div className="countdown">
+				<span className="countdown-col">
+					<span className="countdown-col-element">
 						<strong id="days"></strong>
 						<span>days</span>
 					</span>
 				</span>
 
-				<span className="Countdown-col">
-					<span className="Countdown-col-element">
+				<span className="countdown-col">
+					<span className="countdown-col-element">
 						<strong id="hours"></strong>
 						<span>hours</span>
 					</span>
 				</span>
 
-				<span className="Countdown-col">
-					<span className="Countdown-col-element">
+				<span className="countdown-col">
+					<span className="countdown-col-element">
 						<strong id="minutes"></strong>
 						<span>minutes</span>
 					</span>
 				</span>
 
-				<span className="Countdown-col">
-					<span className="Countdown-col-element">
+				<span className="countdown-col">
+					<span className="countdown-col-element">
 						<strong id="seconds"></strong>
 						<span>seconds</span>
 					</span>

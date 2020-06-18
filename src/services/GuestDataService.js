@@ -1,4 +1,4 @@
-import { MapToGuests } from './guestMapper';
+import { MapToGuests } from './Mappers/GuestMapper';
 
 const url = 'https://schwanwedding.com/api/';
 

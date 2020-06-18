@@ -1,5 +1,5 @@
-import { MapToGuests } from './guestMapper';
-import { Guests } from '../testData/guests';
+import { MapToGuests } from './Mappers/GuestMapper';
+import { Guests } from './TestData/Guests';
 
 export const getGuestList = async (guestsResponses) => {
 	return MapToGuests(Guests);

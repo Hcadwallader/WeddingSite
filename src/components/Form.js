@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../styles/App.scss';
-import './Rsvp.scss';
+import '../styles/App.scss';
+import '../pages/Rsvp/Rsvp.scss';
 
 const Form = ({
 	handleGuestChange,
@@ -9,9 +9,9 @@ const Form = ({
 	rowIndex,
 }) => (
 	<React.Fragment>
-		<div className="formItem">
+		<div className="form-item">
 			<button
-				className="nameBanner"
+				className="name-banner"
 				onClick={(e) =>
 					handleToggleGuestForm(e, currentGuest.isOpen, currentGuest)
 				}
@@ -21,10 +21,10 @@ const Form = ({
 		</div>
 		{currentGuest && currentGuest.isOpen && (
 			<React.Fragment>
-				<div className="formItem">
+				<div className="form-item">
 					<div className="radiobuttons">
 						<input
-							className="radioButtons"
+							className="radio-buttons"
 							name={'attending ' + rowIndex}
 							id="Yes"
 							onChange={(e) => handleGuestChange(e, currentGuest)}
@@ -39,7 +39,7 @@ const Form = ({
 						<label htmlFor="Yes">Yes, wouldn’t miss it</label>
 
 						<input
-							className="radioButtons"
+							className="radio-buttons"
 							name={'attending ' + rowIndex}
 							id="No"
 							onChange={(e) => handleGuestChange(e, currentGuest)}
@@ -56,7 +56,7 @@ const Form = ({
 				</div>
 				{currentGuest !== null && currentGuest.attending && (
 					<React.Fragment>
-						<div className="formItem">
+						<div className="form-item">
 							<select
 								name="starter"
 								onChange={(e) =>
@@ -81,7 +81,7 @@ const Form = ({
 								<option value="na">N/A</option>
 							</select>
 						</div>
-						<div className="formItem">
+						<div className="form-item">
 							<select
 								name="main"
 								onChange={(e) =>
@@ -107,7 +107,7 @@ const Form = ({
 								<option value="na">N/A</option>
 							</select>
 						</div>
-						<div className="formItem">
+						<div className="form-item">
 							<input
 								type="text"
 								name="dietaryRequirements"
@@ -122,7 +122,7 @@ const Form = ({
 								value={currentGuest.dietaryRequirements}
 							/>
 						</div>
-						<div className="formItem">
+						<div className="form-item">
 							<select
 								name="winePreference"
 								onChange={(e) =>
@@ -143,7 +143,7 @@ const Form = ({
 								<option value="none">Not for me thanks</option>
 							</select>
 						</div>
-						<div className="formItem">
+						<div className="form-item">
 							<input
 								type="text"
 								name="songChoice"

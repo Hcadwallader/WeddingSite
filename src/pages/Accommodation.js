@@ -1,9 +1,9 @@
 import React from 'react';
-import '../../styles/App.scss';
+import '../styles/App.scss';
 
 const Accommodation = () => (
-	<div className="whiteBox pageContainer">
-		<div className="textContainer">
+	<div className="white-box page-container">
+		<div className="text-container">
 			<h1>Accommodation</h1>
 			<p>
 				Llanfrynach: (a lovely little village to the south, which is

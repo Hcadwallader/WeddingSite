@@ -1,12 +1,12 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
 import './styles/App.scss';
-import Venue from './components/Venue/Venue';
-import Accommodation from './components/Accommodation/Accommodation';
+import Venue from './pages/Venue/Venue';
+import Accommodation from './pages/Accommodation';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import Home from './components/Home/Home';
+import Home from './pages/Home/Home';
+import Rsvp from './pages/Rsvp/Rsvp';
 import NavBar from './components/NavBar/NavBar';
-import Rsvp from './components/Rsvp/Rsvp';
 
 export const App = () => (
 	<div className="app-container">
