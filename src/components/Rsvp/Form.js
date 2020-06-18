@@ -65,6 +65,7 @@ const Form = ({
 								onBlur={(e) =>
 									handleGuestChange(e, currentGuest)
 								}
+								value={currentGuest.starter}
 							>
 								{' '}
 								<option>
@@ -90,6 +91,7 @@ const Form = ({
 								onBlur={(e) =>
 									handleGuestChange(e, currentGuest)
 								}
+								value={currentGuest.main}
 							>
 								{' '}
 								<option>
@@ -120,6 +122,7 @@ const Form = ({
 									handleGuestChange(e, currentGuest)
 								}
 								placeholder="Any dietary requirements"
+								value={currentGuest.dietaryRequirements}
 							/>
 						</div>
 						<div className="formItem">
@@ -134,6 +137,7 @@ const Form = ({
 									handleGuestChange(e, currentGuest)
 								}
 								placeholder="Enter a great song for our evening playlist (optional)"
+								value={currentGuest.songChoice}
 							/>
 						</div>
 					</React.Fragment>
