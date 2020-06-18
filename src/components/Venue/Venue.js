@@ -3,7 +3,7 @@ import './Venue.scss';
 import '../../styles/App.scss';
 
 const Venue = () => (
-	<div className="whiteBox pageContainer">
+	<div className="whiteBox venueContainer">
 		<h1>Venue</h1>
 		<div className="row">
 			<div className="column">

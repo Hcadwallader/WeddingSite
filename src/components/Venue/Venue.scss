@@ -9,12 +9,13 @@
 	align-items: center;
 
 	@media (max-width: $large-mobile) {
-		width: unset;
+		width: auto;
 		//flex-direction: row;
 	}
 }
 
 /* Clear floats after the columns */
+
 .row:after {
 	content: '';
 	display: table;
@@ -24,20 +25,31 @@
 .row {
 	display: flex;
 	padding: 20px;
-	@media (max-width: $small-mobile) {
+	@media (max-width: $large-mobile) {
 		flex-direction: column;
 	}
 }
 
 .map {
-	width: 600px;
-	height: 450px;
+	width: 450px;
+	height: 300px;
 	frameborder: 0;
 	border: 5px;
+  
+	@media (max-width: $tablet) {
+		width: auto;
+		height: auto;
+	}
+}
 
-	@media (max-width: $large-mobile) {
-		width: unset;
-		height: unset;
-		//max-width: 100%;
+.venueContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 70%;
+
+	@media (max-width: $tablet) {
+		width: auto;
+		height: auto;
 	}
 }
