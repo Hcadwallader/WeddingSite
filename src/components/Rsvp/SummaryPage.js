@@ -3,7 +3,7 @@ import '../../styles/App.scss';
 import './Rsvp.scss';
 
 const SummaryPage = ({ isAttending }) => (
-	<div className="whiteBox rsvpContainer">
+	<div className="whiteBox summaryContainer">
 		<div className="formContainer">
 			<h2>
 				Thanks for your RSVP.{' '}
