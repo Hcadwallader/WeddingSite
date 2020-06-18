@@ -10,13 +10,12 @@ Only change was to add sass, in order to do that needed to add sass-loader and u
 
 https://medium.com/free-code-camp/create-a-react-frontend-a-node-express-backend-and-connect-them-together-c5798926047c
 https://medium.com/@purposenigeria/build-a-restful-api-with-node-js-and-express-js-d7e59c7a3dfbhttps://medium.com/free-code-camp/create-a-fullstack-react-express-mongodb-app-using-docker-c3e3e21c4074
-  
-  
+
 Useful links for creating a countdown:
-  
+
 https://medium.com/@kristin_baumann/react-countdown-6455838b6faf
 https://blog.adrienne.io/a-countdown-timer-in-pure-javascript/
-  
+
 sticky header articles:
 https://css-tricks.com/fixed-headers-on-page-links-and-overlapping-content-oh-my/
 
@@ -49,6 +48,16 @@ https://stackoverflow.com/questions/45395174/fetch-respond-to-preflight-response
 https://stackoverflow.com/questions/18264334/cross-origin-resource-sharing-with-spring-security
 https://www.baeldung.com/spring-security-cors-preflight
 
-
 ## Async/await guide
+
 https://javascript.info/async-await
+
+## Thoughts on style guides
+
+https://github.com/airbnb/javascript
+
+## Folder structuring
+
+https://hackernoon.com/structuring-projects-and-naming-components-in-react-1261b6e18d76
+https://reactjs.org/docs/faq-structure.html
+https://levelup.gitconnected.com/2-simple-effective-react-file-naming-convention-tips-cce1022328a8
