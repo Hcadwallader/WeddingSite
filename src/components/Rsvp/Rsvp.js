@@ -13,7 +13,10 @@ const guestDataService =
 
 const Rsvp = () => {
 	const [guestList, setGuestList] = useState(null);
-	const [guestResponse, setGuestResponse] = useState({});
+	const [guestResponse, setGuestResponse] = useState({
+		name: '',
+		accessCode: '',
+	});
 	const [isAuthenticated, setIsAuthenticated] = useState(false);
 	const [hasResponded, setHasResponded] = useState(false);
 	const [isAttending, setIsAttending] = useState(null);
@@ -45,11 +48,6 @@ const Rsvp = () => {
 				);
 			}
 		});
-		// .then((guest) => {
-		// 	if (guest != null) {
-		// 		setIsAuthenticated(true);
-		// 	}
-		// });
 	};
 
 	const handleGuestRsvpSubmission = (e, guestList) => {

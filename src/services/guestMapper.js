@@ -15,8 +15,8 @@ const CreateNewGuest = (guest) => {
 		attending: guest.attending,
 		starter: guest.starter,
 		main: guest.main,
-		dietaryRequirements: null,
-		songChoice: null,
+		dietaryRequirements: guest.dietaryRequirements,
+		songChoice: guest.songChoice,
 		winePreference: guest.winePreference,
 		isOpen: false,
 	};
