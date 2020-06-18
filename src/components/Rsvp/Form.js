@@ -68,9 +68,7 @@ const Form = ({
 								value={currentGuest.starter}
 							>
 								{' '}
-								<option>
-									Please select which starter you would like
-								</option>
+								<option>Please select a starter</option>
 								<option value="pate">
 									Pate with Grilled Ciabatta
 								</option>
@@ -80,6 +78,7 @@ const Form = ({
 								<option value="salad">
 									Squash, Artichoke and Feta Salad (V)
 								</option>
+								<option value="na">N/A</option>
 							</select>
 						</div>
 						<div className="formItem">
@@ -94,10 +93,7 @@ const Form = ({
 								value={currentGuest.main}
 							>
 								{' '}
-								<option>
-									Please select which main course you would
-									like
-								</option>
+								<option>Please select a main course</option>
 								<option value="salmon">
 									Salmon Fillet with Tarragon Sauce
 								</option>
@@ -108,6 +104,7 @@ const Form = ({
 									Leek, Goat’s Cheese, Walnut and Lemon Tart
 									(V)
 								</option>
+								<option value="na">N/A</option>
 							</select>
 						</div>
 						<div className="formItem">
@@ -124,6 +121,27 @@ const Form = ({
 								placeholder="Any dietary requirements"
 								value={currentGuest.dietaryRequirements}
 							/>
+						</div>
+						<div className="formItem">
+							<select
+								name="winePreference"
+								onChange={(e) =>
+									handleGuestChange(e, currentGuest)
+								}
+								onBlur={(e) =>
+									handleGuestChange(e, currentGuest)
+								}
+								value={currentGuest.winePreference}
+							>
+								{' '}
+								<option>
+									Please select your wine preference
+								</option>
+								<option value="white">White</option>
+								<option value="red">Red</option>
+								<option value="both">I'm not picky</option>
+								<option value="none">Not for me thanks</option>
+							</select>
 						</div>
 						<div className="formItem">
 							<input
