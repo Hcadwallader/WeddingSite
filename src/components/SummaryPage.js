@@ -1,10 +1,10 @@
 import React from 'react';
-import '../../styles/App.scss';
-import './Rsvp.scss';
+import '../styles/App.scss';
+import '../pages/Rsvp/Rsvp.scss';
 
 const SummaryPage = ({ isAttending }) => (
-	<div className="whiteBox summaryContainer">
-		<div className="formContainer">
+	<div className="white-box summary-container">
+		<div className="form-container">
 			<h2>
 				Thanks for your RSVP.{' '}
 				{isAttending ? (

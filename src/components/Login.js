@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../styles/App.scss';
-import './Rsvp.scss';
+import '../styles/App.scss';
+import '../pages/Rsvp/Rsvp.scss';
 
 const Login = ({
 	handleGuestChange,
@@ -8,12 +8,12 @@ const Login = ({
 	guestResponse,
 	loginError,
 }) => (
-	<div className="whiteBox loginContainer">
-		<div className="formContainer">
-			<div className="formItem">
+	<div className="white-box login-container">
+		<div className="form-container">
+			<div className="form-item">
 				<h1>Login</h1>
 			</div>
-			<div className="formItem">
+			<div className="form-item">
 				<input
 					type="text"
 					name="name"
@@ -24,7 +24,7 @@ const Login = ({
 					placeholder="Please enter your name"
 				/>
 			</div>
-			<div className="formItem">
+			<div className="form-item">
 				<input
 					type="text"
 					name="accessCode"
@@ -36,11 +36,11 @@ const Login = ({
 				/>
 			</div>
 			{loginError && (
-				<div className="formItem">
+				<div className="form-item">
 					<p className="login-text">{loginError}</p>
 				</div>
 			)}
-			<div className="formItem">
+			<div className="form-item">
 				<button type="button" onClick={(e) => handleGuestLogin(e)}>
 					Submit
 				</button>

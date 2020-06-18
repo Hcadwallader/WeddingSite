@@ -1,4 +1,4 @@
-@import '../../styles/Constants.scss';
+@import '../../styles/Constants';
 
 input {
 	outline: 0;
@@ -12,7 +12,7 @@ input {
 	width: 350px;
 }
 
-input.radioButtons {
+input.radio-buttons {
 	width: 40px;
 }
 
@@ -30,7 +30,7 @@ button {
 	cursor: pointer;
 	font-size: 14px;
 }
-button.nameBanner {
+button.name-banner {
 	background: #7da1bf;
 	border: 1px solid #7da1bf;
 	width: 350px;
@@ -57,7 +57,7 @@ select {
 	width: 350px;
 }
 
-.rsvpContainer {
+.rsvp-container {
 	width: 50%;
 	height: 80%;
 	@media (max-width: $large-mobile) {
@@ -65,7 +65,7 @@ select {
 	}
 }
 
-.loginContainer {
+.login-container {
 	width: 50%;
 	height: 40%;
 	@media (max-width: $large-mobile) {
@@ -74,7 +74,7 @@ select {
 	}
 }
 
-.formContainer {
+.form-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
@@ -82,7 +82,7 @@ select {
 	height: 100%;
 }
 
-.formItem {
+.form-item {
 	display: flex;
 	font-size: 14px;
 }
@@ -91,7 +91,7 @@ select {
 	color: red;
 }
 
-.summaryContainer {
+.summary-container {
 	width: 50%;
 	height: 30%;
 	@media (max-width: $large-mobile) {

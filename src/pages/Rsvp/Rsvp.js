@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Login from './Login';
-import Form from './Form';
-import SummaryPage from './SummaryPage';
+import Login from '../../components/Login';
+import Form from '../../components/Form';
+import SummaryPage from '../../components/SummaryPage';
 
 import '../../styles/App.scss';
 import './Rsvp.scss';
@@ -77,9 +77,9 @@ const Rsvp = () => {
 			)}
 
 			{isAuthenticated && !hasResponded && guestList && (
-				<div className="whiteBox rsvpContainer">
-					<div className="formContainer">
-						<div className="formItem">
+				<div className="white-box rsvp-container">
+					<div className="form-container">
+						<div className="form-item">
 							<h1>RSVP form</h1>
 						</div>
 
@@ -100,7 +100,7 @@ const Rsvp = () => {
 								></Form>
 							);
 						})}
-						<div className="formItem">
+						<div className="form-item">
 							<button
 								type="button"
 								onClick={(e) =>
