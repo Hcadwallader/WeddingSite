@@ -2,12 +2,13 @@ export const MapToGuests = (guestsReturnedFromLookup) => {
 	let guestResponse = {};
 
 	for (const g of guestsReturnedFromLookup.guests) {
-		guestResponse[g.name] = CreateNewGuest(g);
+		let shouldBeOpen = g === guestsReturnedFromLookup.guests[0];
+		guestResponse[g.name] = CreateNewGuest(g, shouldBeOpen);
 	}
 	return guestResponse;
 };
 
-const CreateNewGuest = (guest) => {
+const CreateNewGuest = (guest, shouldBeOpen) => {
 	return {
 		name: guest.name,
 		id: guest.id,
@@ -18,6 +19,6 @@ const CreateNewGuest = (guest) => {
 		dietaryRequirements: guest.dietaryRequirements,
 		songChoice: guest.songChoice,
 		winePreference: guest.winePreference,
-		isOpen: false,
+		isOpen: shouldBeOpen,
 	};
 };
