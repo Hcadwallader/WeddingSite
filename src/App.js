@@ -6,7 +6,7 @@ import Accommodation from './pages/Accommodation';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Rsvp from './pages/Rsvp/Rsvp';
-import NavBar from './components/NavBar/NavBar';
+import NavBar from '@bit/helencadwallader.sharedcomponents.nav-bar';
 
 export const App = () => (
 	<div className="app-container">

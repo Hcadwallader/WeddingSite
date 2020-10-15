@@ -1,4 +1,4 @@
-import Timer from '../../components/Timer/Timer';
+import Timer from '@bit/helencadwallader.sharedcomponents.timer';
 import '../../styles/App.scss';
 import './Home.scss';
 

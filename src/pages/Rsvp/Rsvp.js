@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Login from '../../components/Login';
-import Form from '../../components/Form';
-import SummaryPage from '../../components/SummaryPage';
+import Login from '@bit/helencadwallader.sharedcomponents.guest-login';
+import Form from '@bit/helencadwallader.sharedcomponents.guest-form';
+import SummaryPage from '@bit/helencadwallader.sharedcomponents.guest-summary';
 
 import '../../styles/App.scss';
 import './Rsvp.scss';

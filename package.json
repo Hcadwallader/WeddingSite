@@ -32,6 +32,11 @@
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.10.1",
     "@babel/runtime": "^7.10.2",
+    "@bit/helencadwallader.sharedcomponents.guest-form": "0.0.1",
+    "@bit/helencadwallader.sharedcomponents.guest-login": "0.0.1",
+    "@bit/helencadwallader.sharedcomponents.guest-summary": "0.0.1",
+    "@bit/helencadwallader.sharedcomponents.nav-bar": "0.0.1",
+    "@bit/helencadwallader.sharedcomponents.timer": "0.0.1",
     "express": "^4.17.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
