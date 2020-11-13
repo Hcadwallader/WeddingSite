@@ -37,6 +37,8 @@
     "@bit/helencadwallader.sharedcomponents.guest-summary": "0.0.1",
     "@bit/helencadwallader.sharedcomponents.nav-bar": "0.0.1",
     "@bit/helencadwallader.sharedcomponents.timer": "0.0.1",
+    "@bit/helencadwallader.sharedservices.dummy-guest-data-service": "0.0.1",
+    "@bit/helencadwallader.sharedservices.guest-data-service": "0.0.1",
     "express": "^4.17.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",

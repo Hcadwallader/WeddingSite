@@ -8,8 +8,8 @@ import './Rsvp.scss';
 
 const guestDataService =
 	process.env.NODE_ENV !== 'production'
-		? require('../../services/DummyGuestDataService')
-		: require('../../services/GuestDataService');
+		? require('@bit/helencadwallader.sharedservices.dummy-guest-data-service')
+		: require('@bit/helencadwallader.sharedservices.guest-data-service');
 
 const Rsvp = () => {
 	const [guestList, setGuestList] = useState(null);
