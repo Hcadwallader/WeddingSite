@@ -36,7 +36,7 @@
     "@bit/helencadwallader.sharedcomponents.guest-login": "0.0.1",
     "@bit/helencadwallader.sharedcomponents.guest-summary": "0.0.1",
     "@bit/helencadwallader.sharedcomponents.nav-bar": "0.0.1",
-    "@bit/helencadwallader.sharedcomponents.timer": "0.0.1",
+    "@bit/helencadwallader.sharedcomponents.timer": "0.0.7",
     "@bit/helencadwallader.sharedservices.dummy-guest-data-service": "0.0.1",
     "@bit/helencadwallader.sharedservices.guest-data-service": "0.0.1",
     "express": "^4.17.1",
@@ -45,5 +45,10 @@
     "react-hot-loader": "^4.12.18",
     "react-router-dom": "^5.1.2",
     "typeface-gochi-hand": "0.0.72"
+  },
+  "bit": {
+    "env": {},
+    "componentsDefaultDirectory": "components/{name}",
+    "packageManager": "npm"
   }
 }
