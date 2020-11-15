@@ -1,0 +1,23 @@
+@import '~@bit/helencadwallader.sharedcomponents.constants';
+
+.countdown {
+	color: white;
+}
+
+.countdown-col {
+	display: inline-block;
+}
+
+.countdown-col-element {
+	display: inline-block;
+	margin: 0 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.countdown-col-element strong {
+	font-size: 3em;
+	@media (max-width: $small-mobile) {
+		font-size: 2.2em;
+	}
+}

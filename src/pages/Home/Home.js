@@ -1,4 +1,6 @@
-import TimerContainer from '@bit/helencadwallader.sharedcomponents.timer';
+//import TimerContainer from '@bit/helencadwallader.sharedcomponents.timer';
+import TimerContainer from '../../components/timer/timerContainer';
+//import CounterContainer from '@bit/helencadwallader.sharedreactomponents.counter';
 import '../../styles/App.scss';
 import './Home.scss';
 
